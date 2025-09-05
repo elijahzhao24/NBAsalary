@@ -1,0 +1,14 @@
+import os
+from dotenv import load_dotenv
+
+# reload env vars (safe to call again)
+load_dotenv(override=True)
+
+def masked(s):
+    if not s: return None
+    return s[:4] + "..." + s[-4:]
+
+print("DATABASE_URL:", bool(os.getenv("DATABASE_URL")))
+print("SUPABASE_URL:", os.getenv("SUPABASE_URL"))
+print("SUPABASE_BUCKET:", os.getenv("SUPABASE_BUCKET"))
+print("SUPABASE_SERVICE_KEY present?:", masked(os.getenv("SUPABASE_SERVICE_KEY")))

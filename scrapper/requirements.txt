@@ -1,0 +1,16 @@
+psycopg2-binary
+python-dotenv
+requests
+beautifulsoup4
+lxml
+pandas
+datetime
+difflib
+re
+time
+unicodedata
+json
+mimetypes
+rembg
+Pillow
+onnxruntime
